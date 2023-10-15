@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Task 2</title>
+    <script src="./script.js" defer></script>
+</head>
+<body >
+    <div class="page">
+        <div class="container">
+            <div>
+                <form>
+                    <h1>Транспортные средства и водители</h1>
+                    <h2>Гос-номер</h2>
+                    <input type="text" name="stateNumber" placeholder="Укажите гос-номер" pattern="[АВЕКМНОРСТУХавекмнорстух]{1}\d{3}[АВЕКМНОРСТУХавекмнорстух]{2}\d{2,3}" maxlength="9">
+                    <h2>Транспортное средство</h2>
+                    <input type="text" name="transport" placeholder="Транспортное средство" required>
+                    <h2>Ориентировочная дата прибытия к покупателю</h2>
+                    <input type="text" name="date" placeholder="Дата*" required onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}">
+                    <h1>Данные о водителе</h1>
+                    <h2>ФИО</h2>
+                    <input type="text" name="fullName" placeholder="Укажите ФИО водителя" required>
+                    <h2>Паспортные данные</h2>
+                    <div class="row">
+                        <input type="text" name="series" pattern="\d{4}" placeholder="Серия" required>
+                        <input type="text" name="number" pattern="\d{6}" placeholder="Номер" required>
+                    </div>
+                    
+                    <h2>Кем выдан</h2>
+                    <input type="text" name="whenIssued" placeholder="Кем выдан" required>
+                    <h2>Когда выдан</h2>
+                    <input type="text" name="whomIssued" placeholder="Когда выдан" required>
+                    <div>
+                        <button class="btn-submit">
+                            Отправить
+                        </button>
+                        <button class="btn-cancel">
+                            Отменить
+                        </button>
+                        <button>BATON</button>
+                    </div>
+                </form>
+            </div>
+         </div>
+    </div>
+  </body>
+</html>
